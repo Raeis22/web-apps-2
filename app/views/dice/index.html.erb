@@ -11,5 +11,9 @@
     <a href="/dice?username=<%= @username%>">Roll Again</a>
   </p>
   <% else %>
-    <h1>What is your name?<>
-  end
+    <h1>What is your name?</h1>
+    <form action="/dice" method="GET">
+      <input type="text" username="username">
+      <button><a href="/dice">Let's play!</a></button>
+    </form>
+  <% end %>

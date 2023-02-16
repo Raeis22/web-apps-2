@@ -19,7 +19,7 @@
   </p>
   <p>
     <%= form.label "company_id" %>
-    <%= form.text_field "company_id" %>
+    <%= form.collection_select "company_id", Company.all, "id", "name" %>
   </p>
   <p>
     <%= form.submit %>

@@ -7,6 +7,13 @@ class ContactsController < ApplicationController
 
   def new
     @contact = Contact.new
+    @contact.company_id = params["company_id"]
+  end
+
+  def create
+    @contact = Contact.new(params["contacts"])
+    @contact.save
+    redirect_to "/companies/#{@contact.company_id}"
   end
 
 end
